@@ -3,9 +3,11 @@
 
 * Panic==crash
 * No null
-* binary crate vs library crate (defined in Cargo.toml)
-* 'cargo update' ignores the Cargo.lock file on updating
-* 'cargo doc --open' to create local doc from proj+deps
+* Binary app crate vs library crate (defined in Cargo.toml)
+    For an app, must have a `src/main.rs`. To create a new library, pass `--lib` to the `cargo new` command (cargo would create the `src/lib.rs` for us instead).
+`cargo run`
+* `cargo update` ignores the Cargo.lock file on updating
+* `cargo doc --open` to create local doc from proj+deps
 
 * Rust has Generics, e.g. `std::collections::HashMap<String, String>`
 * Rust has `Result<T, E>` akin to Optionals. Result is an ENUM type that wraps two variants Ok(T) or Err(E) (aka 'discriminated union')
